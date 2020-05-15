@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Front-end đầu đề</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <!------------------------menu ------------------------->
+        <div class="menu" id="menubong">
+            <div class="logo">
+                <img src="./assets/images/logo3.png" alt="img">
+            </div>
+            <div class="menu-left">
+                <ul>
+                    <li>
+                        <a href="#">Trang Chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">Thời trang nam</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Độ tuổi</a></li>
+                            <li><a href="#">Bốn mùa</a></li>
+                            <li><a href="#">Thương hiệu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Thời trang nam</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Độ tuổi</a></li>
+                            <li><a href="#">Bốn mùa</a></li>
+                            <li><a href="#">Thương hiệu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Bé trai</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Độ tuổi :1-10 tuổi</a></li>
+                            <li><a href="#">Bốn mùa</a></li>
+                            <li><a href="#">Thương hiệu</a></li>
+                            <li><a href="#">Mặc hằng ngày</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Bé trai</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Độ tuổi: 1-10 tuổi</a></li>
+                            <li><a href="#">Bốn mùa</a></li>
+                            <li><a href="#">Thương hiệu</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sản phẩm mới</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Thương hiệu</a></li>
+                            <li><a href="#">Nam </a></li>
+                            <li><a href="#">Nữ</a></li>
+                            <li><a href="#">Bé trai</a></li>
+                            <li><a href="#">Bé gái</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Sales</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Thương hiệu nam(sản phẩm dưới 200k)</a></li>
+                            <li><a href="#">Thương hiệu nữ(sản phẩm dưới 200k)</a></li>
+                            <li><a href="#">Thương hiệu bé trai(sản phẩm dưới 200k)</a></li>
+                            <li><a href="#">Thương hiệu bé gái(sản phẩm dưới 200k)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-right">
+                <form action="" method="post">
+                    <input type="text" value="Tìm kiếm">
+                    <button name="button" value="OK" type="button" onclick="hello()"> <img  src="./assets/images/search.png" alt="Search" ></button>
+                    <script>
+                        function hello() {
+                            alert("waiting");
+                        }
+                    </script>
+                </form>
+                <div class="account">
+                    <a href="#">
+                        <img src="./assets/images/acount.png" alt="img">
+                    </a>
+                </div>
+                <div class="cart">
+                    <a href="#">
+                        <img src="./assets/images/cart.png" alt="img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="empty">
+
+        </div>
+        <!------------------------menu ------------------------->
+
+
+        <!------------------------Content ------------------------->
+
+        <div class="Content">
+            <div class="chuchay">
+                <marquee style="color:red;width: 70%;">KHUYẾN MÃI CỰC KHỦNG, MUA NGAY ĐỪNG ĐỂ BỎ LỠ </marquee>
+            </div>
+            <!-- Slide banner-->
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <img src="/assets/images/banner4.jpg" style="width:1400px;height: 650px;">
+                </div>
+
+                <div class="mySlides1">
+                    <img src="./assets/images/banner5.png" style="width:1400px;height: 650px;">
+                </div>
+
+                <div class="mySlides1">
+                    <img src="./assets/images/banner3.jpg" style="width:1400px;height: 650px;">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+            <script>
+                var slideIndex = [1, 1];
+                var slideId = ["mySlides1", "mySlides2"]
+                showSlides(1, 0);
+                showSlides(1, 1);
+
+                function plusSlides(n, no) {
+                    showSlides(slideIndex[no] += n, no);
+                }
+
+                function showSlides(n, no) {
+                    var i;
+                    var x = document.getElementsByClassName(slideId[no]);
+                    if (n > x.length) {
+                        slideIndex[no] = 1
+                    }
+                    if (n < 1) {
+                        slideIndex[no] = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex[no] - 1].style.display = "block";
+                }
+                setTimeout(function() {
+                    plusSlides(1, 0);
+                    showSlides(1, 0)
+                }, 3000);
+            </script>
+            <!-- slide banner -->
+            <div class="btn-review">
+                <h2>Giới thiệu về Style Zero</h2>
+                <p>
+                    Công ty Cổ phần Thương mại và Dịch vụ Quang Long được thành lập vào năm 2019, ban đầu hoạt động <br />trong lĩnh vực sản xuất hàng thời trang xuất khẩu với các sản phẩm chủ yếu làm từ len và sợi.Năm 2020,<br /> công ty cho ra đời thương
+                    hiệu thời trang Style Zero nhằm khai thác nhu cầu đang tăng lên của thị trường <br />nội địa. Thương hiệu Syle Zero vừa ra mắt đã được khách hàng đánh giá rất cao về dòng sản phẩm len, sợi <br />do mẫu mã phong phú và chất lượng tốt...
+                </p>
+                <div class="btn-show">
+                    <a href="#">Hiển thị thêm</a>
+                </div>
+            </div>
+            <!-- Quảng cáo -->
+            <div class="Self-promotion">
+                <div class="QC">
+                    <a href="#"><img src="./assets/images/begai.png" alt="img"></a>
+                </div>
+                <div class="QC">
+                    <a href="#"><img src="./assets/images/betrai.png" alt="img"></a>
+                </div>
+                <div class="new-arrivals">
+                    <h1>NEW ARRIVALS</h1>
+                    <div class="option">
+                        <a href="#">Nữ</a>
+                        <a href="#">Nam</a>
+                        <a href="#">Bé gái</a>
+                        <a href="#">Bé trai</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Sản phẩm bán chạy -->
+            <div class="hot-products">
+
+
+            </div>
+            <!-- Sản phẩm bán chạy -->
+            <!-- Sản phẩm mới -->
+            <div class="sp-new">
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/begai2.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">Áo polo bé trai in hình </a>
+                        <p><b>179.000₫</b></p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/betrai2.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">Váy liền bé gái 299.000₫</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/girl1.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">Áo phông nam họa tiết kẻ 349.000₫</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/girl2.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">Áo sơ mi nam 349.000₫</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/boy1.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#"> Váy liền nữ cơ bản 499.000₫</a>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="img-sp">
+                        <a href="#">
+                            <img src="./assets/images/boy2.jpg" alt="img">
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#"> Váy liền nữ 699.000₫</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm mới -->
+        </div>
+
+        <!------------------------Content ------------------------->
+
+        <!------------------------footer ------------------------->
+        <footer>
+            <br />
+            <div class="ketthuc"><a href="#">Shop uy tín nhất Việt Nam</a></div>
+            <br />
+            <b>Địa chỉ: Hà Nội</b>
+            <br />
+            <br />
+            <p>Hotline của shop: 0868 017117 ~ 0904 245355</p>
+        </footer>
+
+        <!------------------------footer ------------------------->
+    </div>
+
+</body>
+
+</html>
