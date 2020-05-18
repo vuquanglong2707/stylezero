@@ -1,21 +1,20 @@
 * {
     box-sizing: border-box;
     padding: 0px;
-    margin: 0 auto;
 }
 
 body {
     color: black;
-    background-size: 100% 100%;
+    margin: 0 auto;
     font-family: "Times New Roman", Times, serif;
 }
 
-#container {
-    width: 1400px;
+.container {
+    width: 100%;
     margin: 0 auto;
 }
 
-#container .empty {
+.container .empty {
     background-color: white;
     height: 100px;
 }
@@ -23,10 +22,10 @@ body {
 
 /* Tạo khung */
 
-#container .menu {
+.container .menu {
     background: white;
     height: 100px;
-    width: 1400px;
+    width: 100%;
     position: fixed;
     box-shadow: 0px 2px 2px rgba(0.5, 0.5, 0.5, 0.5);
     z-index: 2;
@@ -36,107 +35,128 @@ body {
 /* -----------------------Menu ----------------------- */
 
 
+/* .container .menu .space1 {
+    width: 10%;
+    background-color: #333F48;
+} */
+
+
 /* Phần logo */
 
-#container .menu .logo img {
-    width: 230px;
+.container .menu .logo {
+    overflow: hidden;
+    display: inline;
     float: left;
-    position: relative;
-    left: 5px;
-    bottom: 80px;
+    width: 16%;
+    height: 70%;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.container .menu .logo img {
+    width: 100%;
+    height: 100%;
 }
 
 
 /* Phần thanh menu */
 
-#container .menu .menu-left {
+.container .menu .menu-left {
+    display: inline;
     float: left;
-    position: relative;
-    left: 5px;
-    bottom: 10px;
-    padding-top: 50px;
+    width: 60%;
+    margin-top: 35px;
 }
 
-#container .menu ul {
+.container .menu ul {
     list-style-type: none;
     text-align: center;
+    padding-left: 0px;
 }
 
-#container .menu ul li {
+.container .menu ul li {
     color: 00ff00;
+    margin: 0 30px 0 0;
     font-weight: bold;
     display: inline-table;
-    width: 130px;
     position: relative;
     bottom: 10px;
     font-family: Helvetica;
 }
 
-#container .menu ul li>.sub-menu {
+.container .menu ul li .sub-menu {
     display: none;
     position: absolute;
 }
 
-#container .menu ul li a {
+.container .menu ul li .sub-menu li {
+    width: 200px;
+    display: inline-table;
+}
+
+.container .menu ul li a {
     color: black;
     text-decoration: none;
     padding: 14px 5px;
     display: block;
 }
 
-#container .menu ul li:hover .sub-menu {
+.container .menu ul li:hover .sub-menu {
     display: block;
     background: #f2f2f2;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
-#container .menu ul li a:hover {
-    color: yellow;
-    background-color: black;
+.container .menu ul li a:hover {
+    color: blue;
+}
+
+.container .menu ul li:hover a img {
+    transform: rotate(90deg);
 }
 
 
 /* Phần tìm kiếm và tài khoản  */
 
-#container .menu .menu-right {
-    float: right;
-    position: relative;
-    top: 35px;
-    right: 80px;
+.container .menu .menu-right {
+    display: inline;
+    float: left;
+    width: 20%;
+    margin-top: 30px;
 }
 
-#container .menu .menu-right .account a img {
+.container .menu .menu-right .account a img {
     width: 23px;
     position: relative;
     left: 160px;
     bottom: 24px;
 }
 
-#container .menu .menu-right .cart a img {
+.container .menu .menu-right .cart a img {
     width: 30px;
     position: relative;
     left: 190px;
     bottom: 50px;
 }
 
-#container .menu .menu-right input {
+.container .menu .menu-right input {
     height: 23px;
     width: 120px;
 }
 
-#container .menu .menu-right img {
+.container .menu .menu-right img {
     width: 50px;
 }
 
-#container .menu .menu-right form button {
+.container .menu .menu-right form button {
     width: 25px;
     height: 23px;
     position: relative;
     top: 4px;
 }
 
-#container .menu .menu-right form button img {
+.container .menu .menu-right form button img {
     width: 18px;
     height: 18px;
     position: relative;
@@ -149,23 +169,24 @@ body {
 
 /* -----------------------Content ----------------------- */
 
-#container .Content {
+.container .Content {
     z-index: 1;
+    width: 100%;
 }
 
-#container .Content .chuchay {
+.container .Content .chuchay {
     text-align: center;
 }
 
-#container .Content .chuchay marquee {
+.container .Content .chuchay marquee {
     position: relative;
     top: 3px;
 }
 
 .slideshow-container {
-    max-width: 1400px;
+    max-width: 90%;
     position: relative;
-    margin: auto;
+    margin: 0 auto;
 }
 
 
@@ -289,15 +310,15 @@ body {
     background-color: #000;
     width: 200px;
     height: 40px;
-    margin: 10px 600px;
+    margin: 10px auto;
+    overflow: hidden;
 }
 
-.btn-review a {
+.btn-review .btn-show a {
     text-decoration: none;
     color: rgb(240, 238, 238);
     line-height: 40px;
-    font-size: 20px;
-    padding: 10px 45px;
+    font-size: 15px;
 }
 
 .btn-review .btn-show:hover {
@@ -309,13 +330,14 @@ body {
 }
 
 .Content .Self-promotion {
-    width: 1400px;
+    width: 95%;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .Content .Self-promotion .QC {
-    width: 700px;
+    margin: 0 auto;
+    width: 50%;
     float: left;
     overflow: hidden;
     height: 670px;
@@ -327,7 +349,7 @@ body {
 
 .Content .Self-promotion .new-arrivals {
     background-color: #333F48;
-    width: 1400px;
+    width: 100%;
     height: 60px;
     float: left;
 }
@@ -354,18 +376,17 @@ body {
     top: 7px;
 }
 
-.Content .sp-new a {
-    text-decoration: none;
-    margin: 5px 5px 5px 5px;
+.Content .sp-new {
+    width: 95%;
+    margin: 0 auto;
 }
 
-.Content .sp-new .info .img-sp a img {
-    width: 300px;
+.Content .sp-new a {
+    text-decoration: none;
 }
 
 .Content .sp-new .info {
     float: left;
-    margin: 20px 20px;
 }
 
 .Content .sp-new .info .detail {
